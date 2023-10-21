@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime</title>
+    <style>
+      body {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/438/original/back.jpeg?1697870770);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      header {
+        text-align: center;
+        font-family: fantasy;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 15px auto;
+        padding: 5px 5px;
+        max-width: 70%;
+        text-shadow: 0px 12px 9px rgba(18, 110, 227, 0.6);
+        color: black;
+        border: 3px double rgba(12, 138, 217, 0.4);
+        border-radius: 20px;
+        font-weight: bolder;
+        font-stretch: ultra-expanded;
+        font-size: 70px;
+        background: linear-gradient(
+          181.2deg,
+          rgb(181, 239, 249) 10.5%,
+          rgb(254, 254, 254) 86.8%
+        );
+        opacity: 0.65;
+      }
+      h2 {
+        padding-bottom: 0%;
+        text-shadow: 0px 3px 9px rgba(18, 110, 227, 0.6);
+        color: black;
+        margin: 2 auto;
+      }
+      hr {
+        text-align: center;
+        padding-bottom: 0.5%;
+        margin: 0 0 15px 0;
+        line-height: normal;
+      }
+      img {
+        display: inline-block;
+        margin: 0 1px 1px 50px;
+        padding: 1%;
+        width: 295px;
+        height: 300px;
+        max-width: 60%;
+        max-height: 50%;
+        text-align: left;
+        border-radius: 20px;
+        box-shadow: 20px 19px 30px 3px rgba(32, 127, 216, 0.4);
+        transition: all 200ms ease-in-out;
+      }
+      h6 {
+        text-align: left;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        font-size: 16px;
+        font-family: fantasy;
+        background: transparent;
+        padding: 15px 20px;
+        color: black;
+        border-radius: 30px;
+        box-shadow: 10px 14px 20px rgba(32, 127, 216, 0.7);
+        border: 2px solid rgba(18, 110, 227, 0.6);
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+      button:hover {
+        color: #126ee3;
+        background: #64bbff;
+        font-weight: 900;
+      }
+      a {
+        text-decoration: none;
+        font-family: monospace;
+        color: #126ee3;
+        font-weight: 900;
+      }
+      a:hover {
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .container1 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-left: 250px;
+        margin-right: 250px;
+        background-color: rgba(195, 243, 255, 0.6);
+        border-radius: 20px;
+      }
+      .container2 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-left: 250px;
+        margin-right: 250px;
+        background-color: rgba(195, 243, 255, 0.6);
+        border-radius: 20px;
+      }
+      .container3 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-left: 250px;
+        margin-right: 250px;
+        background-color: rgba(195, 243, 255, 0.6);
+        border-radius: 20px;
+      }
+      .text {
+        display: inline;
+        text-align: left;
+        font-family: fantasy;
+        font-size: 15px;
+        font-weight: 900;
+        color: black;
+      }
+      .small-text {
+        font-size: 19px;
+        font-weight: 900;
+        font-family: fantasy;
+        padding: 0%;
+        color: black;
+      }
+      .onepiecetitle {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 200px;
+        height: 30px;
+        background-color: transparent;
+        border-radius: 5px;
+        box-shadow: 10px 14px 20px rgba(32, 127, 216, 0.7);
+        border: 2px solid rgba(18, 110, 227, 0.6);
+      }
+      .onepiecetitle:hover {
+        filter: blur(0.5px) invert(100%);
+      }
+      .jujutsu-kaisentitle {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: 10px 14px 20px rgba(32, 127, 216, 0.7);
+        border: 2px solid rgba(18, 110, 227, 0.6);
+      }
+      .jujutsu-kaisentitle:hover {
+        filter: blur(0.5px) invert(100%);
+      }
+      .demonslayertitle {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: 10px 14px 20px rgba(32, 127, 216, 0.7);
+        border: 2px solid rgba(18, 110, 227, 0.6);
+      }
+      .demonslayertitle:hover {
+        filter: blur(0.5px) invert(100%);
+      }
+      .onepieceinfo {
+        float: right;
+        text-align: left;
+        font-family: fantasy;
+        font-size: 15px;
+        max-width: 35%;
+      }
+      .jujutsu-kaiseninfo {
+        float: right;
+        text-align: left;
+        font-family: fantasy;
+        font-size: 15px;
+        max-width: 35%;
+      }
+      .demonslayer-info {
+        float: right;
+        text-align: left;
+        font-family: fantasy;
+        font-size: 15px;
+        max-width: 35%;
+      }
+      .subscribe-text {
+        font-family: fantasy;
+        text-align: center;
+        margin: auto;
+        font-size: 15px;
+      }
+      .end {
+        font-family: fantasy;
+        font-size: 15px;
+        color: #126ee3;
+        font-weight: 900;
+        text-align: center;
+      }
+      .largeButton {
+        font-size: 40px;
+        font-weight: 900;
+        color: red;
+        border: none;
+      }
+      .largeButton:hover {
+        background-color: white;
+        color: red;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Anime Watchlist</h1>
+      <h2>Current TOP 3</h2>
+    </header>
+    <hr />
+    <div class="container1">
+      <div class="image1">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/409/original/One_Piece_poster.jpeg?1697833409"
+          alt="One_Piece_poster"
+        />
+      </div>
+      <div class="button1">
+        <a
+          href="https://onepiece.fandom.com/wiki/One_Piece_Wiki"
+          target="_blank"
+        >
+          <img
+            class="onepiecetitle"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/454/original/Screenshot_2023-10-21_at_7.13.01_AM.png?1697886843"
+            alt="One Piece Wiki"
+            data-test="fandom-community-header-community-logo"
+        /></a>
+        <span class="small-text">
+          <h6>
+            Click button ⬆️ to go to <br />
+            WikiFandom Page
+          </h6>
+        </span>
+        <span class="text">
+          <strong>Total Epidsodes:</strong> 1082<br />
+          <span id="manga">
+            <a
+              href="https://one-piece.com/comics/index.html?page=1&sort=desc&category=#tab"
+              target="_blank"
+              ><em>Manga:</em></a
+            >
+          </span>
+          106 volumes
+        </span>
+      </div>
+      <div class="onepieceinfo">
+        <h3>
+          The story follows the adventures of Monkey D. Luffy and his crew, the
+          Straw Hat Pirates, where he explores the Grand Line in search of the
+          mythical treasure known as the "One Piece" in order to become the next
+          King of the Pirates.
+        </h3>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="image2">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/410/original/Jujutsu_Kaisen_poster.jpg?1697833561"
+          alt="Jujutsu_Kaisen_poster"
+        />
+      </div>
+      <div class="Button2">
+        <a
+          href="https://jujutsu-kaisen.fandom.com/wiki/Jujutsu_Kaisen_Wiki"
+          target="_blank"
+        >
+          <img
+            class="jujutsu-kaisentitle"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/453/original/Screenshot_2023-10-21_at_7.10.58_AM.png?1697886714"
+            alt="Jujutsu Kaisen Wiki"
+            data-test="fandom-community-header-community-logo"
+        /></a>
+        <span class="small-text">
+          <h6>
+            Click button ⬆️ to go to <br />
+            WikiFandom Page
+          </h6>
+        </span>
+        <span class="text">
+          <strong>Total Epidsodes:</strong>55<br />
+          <span id="manga">
+            <a href="https://jujutsukaisen.jp/comics/" target="_blank"
+              ><em>Manga:</em></a
+            >
+          </span>
+          23 volumes
+        </span>
+      </div>
+      <div class="jujutsu-kaiseninfo">
+        <h3>
+          The story of Yuji Itadori, an ordinary boy who crosses paths with
+          Megumi Fushiguro, a Jujutsu Sorcerer searching for a powerful Cursed
+          Object known as Ryomen Sukuna's finger. Unintentionally, Yuji's
+          friends unseal the Cursed Object, attracting dangerous Curses to their
+          location.
+        </h3>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="image3">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/411/original/Demon_Slayer_poster.jpg?1697833890"
+          alt="Demon_Slayer_poster"
+        />
+      </div>
+      <div class="Button2">
+        <a
+          href="https://kimetsu-no-yaiba.fandom.com/wiki/Kimetsu_no_Yaiba_Wiki"
+          target="_blank"
+        >
+          <img
+            class="demonslayertitle"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/456/original/Screenshot_2023-10-21_at_7.15.32_AM.png?1697886977"
+            alt="Kimetsu no Yaiba Wiki"
+            data-test="fandom-community-header-community-logo"
+        /></a>
+        <span class="small-text">
+          <h6>
+            Click button ⬆️ to go to <br />
+            WikiFandom Page
+          </h6>
+        </span>
+        <span class="text">
+          <strong>Total Epidsodes:</strong>35<br />
+          <span id="manga">
+            <a
+              href="https://demonslayer-anime.com/risshihen/comic/"
+              target="_blank"
+              ><em>Manga:</em></a
+            >
+          </span>
+          21 volumes
+        </span>
+      </div>
+      <div class="demonslayer-info">
+        <h3>
+          A family is attacked by demons and only two members survive - Tanjiro
+          and his sister Nezuko, who is turning into a demon slowly. Tanjiro
+          sets out to become a demon slayer to avenge his family and cure his
+          sister.
+        </h3>
+      </div>
+    </div>
+    <div class="subscribe-button">
+      <button id="myButton" onclick="changeButtonSize()">
+        <span class="subscribe-text">Subscribe for Updates</span>
+      </button>
+    </div>
+    <div class="end">
+      <p>Coded by: Hnin Hnin Ei</p>
+    </div>
+    <script>
+      function displayMessage() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let subscriptionType = prompt(
+          "Please enter your subscription preference (weekly/monthly):"
+        );
+        let message = document.querySelector("button");
+
+        subscriptionType = subscriptionType.toLowerCase().trim();
+
+        if (subscriptionType === "weekly") {
+          message.innerHTML =
+            "Thank you " + name + " for subscribing to weekly updates!";
+        } else if (subscriptionType === "monthly") {
+          message.innerHTML =
+            "Thank you " + name + " for subscribing to monthly updates!";
+        } else {
+          alert(
+            "Sorry, Invalid subscription preference! Please choose weekly or monthly"
+          );
+        }
+      }
+      let subscribeButton = document.querySelector("button");
+      subscribeButton.addEventListener("click", displayMessage);
+
+      function changeButtonSize() {
+        var button = document.getElementById("myButton");
+        button.classList.add("largeButton");
+      }
+    </script>
+  </body>
+</html>
